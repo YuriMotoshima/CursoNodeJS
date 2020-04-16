@@ -20,7 +20,6 @@
 // das turmas de alunos e envia
 // mensagem do calculo das médias
 
-
 alunosDaTurmaA = [
     {
         nome: 'Yuri',
@@ -71,4 +70,4 @@ enviaMensagem(media1, 'Turma A')
 enviaMensagem(media2, 'Turma B')
 
 // Na function enviaMensagem(media, turma) os nomes entre os () pode ser qualquer um, pois eles representam de forma simbolica uma variavel que será inserida,
-// neste casos a primeira variavel vem da const media1 e media2 e a segunda variavel do segundo parametro da function enviaMensagem(xxxxx, 'Turma A ou Turma B')
+// neste casos a primeira variavel vem da const media1 e media2 e a segunda variavel do segundo parametro da function enviaMensagem(xxxxx, 'Turma A ou Turma B').
