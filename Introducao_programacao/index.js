@@ -20,6 +20,7 @@
 // das turmas de alunos e envia
 // mensagem do calculo das médias
 
+
 alunosDaTurmaA = [
     {
         nome: 'Yuri',
@@ -31,6 +32,11 @@ alunosDaTurmaA = [
     },
     {
         nome: 'Motoshima',
+        nota: 2
+    }
+    ,
+    {
+        nome: 'Giovana',
         nota: 2
     }
 ]
@@ -47,8 +53,14 @@ alunosDaTurmaB = [
     {
         nome: 'BMotoshima',
         nota: 6
+    },
+    {
+        nome: 'Luiz',
+        nota: 9
     }
 ]
+
+
 
 function calculaMedia(alunos) {
 
