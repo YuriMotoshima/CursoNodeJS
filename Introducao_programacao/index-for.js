@@ -78,7 +78,7 @@ function calculaMedia(alunos) {
 
 function calculaMedia(alunos) {
     let soma = 0
-    for (let i = 0; i < alunos.length; i++){
+    for (let i = 0; i < alunos.length; i++) {
         soma = soma + alunos[i].nota
     }
     const media = soma / alunos.length
@@ -98,6 +98,14 @@ function enviaMensagem(media, turma) {
 enviaMensagem(media1, 'Turma A')
 enviaMensagem(media2, 'Turma B')
 
+marcarComoReprovado(alunosDaTurmaA)
+marcarComoReprovado(alunosDaTurmaB)
+
+/*
+
+Aqui foi feito uma repetição que inclui um novo atributo de nome "reprovado" dentro de cada objeto de um array (aluno."reprovado"),
+ também foi feito uma verificação do valor de nota para cada objetivo de uma array
+e de acordo com cada nota foi atribuido uma valor booleano (true or false).
 
 function marcarComoReprovado(alunos) {
     for (let aluno of alunos) {
@@ -109,5 +117,32 @@ function marcarComoReprovado(alunos) {
     console.table(alunos)
 }
 
-marcarComoReprovado(alunosDaTurmaA)
-marcarComoReprovado(alunosDaTurmaB)
+*/
+
+// Esta function apenas marca quais alunos estão reprovados
+function marcarComoReprovado(aluno) {
+    aluno.reprovado = false;
+    if (aluno.nota < 5) {
+        aluno.reprovado = true;
+    }
+}
+
+
+// Nesta function criamos a mensagem de reprovado
+function enviarMensagemReprovado(aluno){
+    if(aluno.reprovado){
+        console.log(`O aluno ${aluno.nome} está reprovado`)
+    }
+}
+
+
+// Nesta function verificamos para cada aluno "objeto de array" se ele está reprovado e envia uma mensagem
+function alunoReprovado ( alunos){
+    for (let aluno of alunos){
+        marcarComoReprovado(aluno);
+        enviarMensagemReprovado(aluno)
+    }
+}
+
+alunoReprovado(alunosDaTurmaA)
+alunoReprovado(alunosDaTurmaB)
