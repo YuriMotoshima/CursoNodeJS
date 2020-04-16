@@ -146,3 +146,5 @@ function alunosReprovado(alunos) {
 
 alunosReprovado(alunosDaTurmaA)
 alunosReprovado(alunosDaTurmaB)
+
+console.table(alunosDaTurmaA)
