@@ -87,7 +87,7 @@ function calculaMedia(alunos) {
 const media1 = calculaMedia(alunosDaTurmaA)
 const media2 = calculaMedia(alunosDaTurmaB)
 
-function enviaMensagem(media, turma) {
+function enviarMensagem(media, turma) {
     if (media > 5) {
         console.log(`A media da ${turma} foi de ${media}. Parabéns`)
     } else {
@@ -95,8 +95,8 @@ function enviaMensagem(media, turma) {
     }
 }
 
-enviaMensagem(media1, 'Turma A')
-enviaMensagem(media2, 'Turma B')
+enviarMensagem(media1, 'Turma A')
+enviarMensagem(media2, 'Turma B')
 
 marcarComoReprovado(alunosDaTurmaA)
 marcarComoReprovado(alunosDaTurmaB)
@@ -129,20 +129,20 @@ function marcarComoReprovado(aluno) {
 
 
 // Nesta function criamos a mensagem de reprovado
-function enviarMensagemReprovado(aluno){
-    if(aluno.reprovado){
+function enviarMensagemReprovado(aluno) {
+    if (aluno.reprovado) {
         console.log(`O aluno ${aluno.nome} está reprovado`)
     }
 }
 
 
 // Nesta function verificamos para cada aluno "objeto de array" se ele está reprovado e envia uma mensagem
-function alunoReprovado ( alunos){
-    for (let aluno of alunos){
+function alunosReprovado(alunos) {
+    for (let aluno of alunos) {
         marcarComoReprovado(aluno);
         enviarMensagemReprovado(aluno)
     }
 }
 
-alunoReprovado(alunosDaTurmaA)
-alunoReprovado(alunosDaTurmaB)
+alunosReprovado(alunosDaTurmaA)
+alunosReprovado(alunosDaTurmaB)
