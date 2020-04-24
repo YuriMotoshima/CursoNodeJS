@@ -37,7 +37,7 @@ header img{
 }
 .chefe .text{
     padding: 60px;
-    align-items: center;
+    text-align: justify;
 }
 
 .chefe .text h1{
