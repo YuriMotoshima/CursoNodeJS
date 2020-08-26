@@ -48,7 +48,7 @@ header {
     border-radius: 50vh;
     border: 5px solid var(--color-green);
     margin-bottom: 32px;
-    height: 350px;
+    height: 250px;
 }
 #wrapper h1{
     font-size: 42px;
@@ -104,6 +104,12 @@ header {
 }
 .card__price{
     background-color: var(--color-rocket);
+    filter: brightness(90%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+.card__info p{
     filter: brightness(90%);
     padding: 5px 20px;
     border-radius: 20px;
