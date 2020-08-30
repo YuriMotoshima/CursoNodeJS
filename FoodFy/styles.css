@@ -115,12 +115,12 @@ footer{
     height: 100%;
     position: fixed;
     top: 0;
-
-    opacity: 1;
-    visibility: visible; 
-/*     opacity: 0;
-    visibility: hidden; */
+    opacity: 0;
+    visibility: hidden;
+/*     opacity: 1;
+    visibility: visible;  */
 }
+
 .modal{
     background-color: white;
     width: 90%;
@@ -133,29 +133,30 @@ footer{
     padding: 30px;
 }
 
-.modal-content .card img{
+.modal-content img{
     width: 100%;
 /*     height: 200px; */
     object-fit: cover;
     border-radius: 15px;
     margin-bottom: 20px;
+    position: relative;
 }
 
-.modal-content .card h4{
+.modal-content h4{
     font-size: 24px;
     line-height: 28px;
     text-align: center;
     color: #111111;
 }
 
-.modal-content .card p{
+.modal-content p{
     font-size: 18px;
     line-height: 21px;
     text-align: center;
     color: #777;
 }
 
-.modal-content .card a{
+.modal-content a{
     font-size: 16px;
     line-height: 18px;
     color: #999999;
