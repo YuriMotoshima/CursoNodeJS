@@ -21,7 +21,11 @@ nunjucks.configure("views", {
 /* req é requisição (request) e res resposta (response) */
 
 server.get('/', function(req, res){
-    return res.render("index")
+    return res.render("about")
+})
+
+server.get('/portifolio', function(req, res){
+    return res.render("portifolio")
 })
 
 server.listen(5000, function(){

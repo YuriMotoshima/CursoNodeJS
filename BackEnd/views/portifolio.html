@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <title>Yuri Motoshima</title>
+{% extends "layout.html" %}
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
-</head>
+{% block head %}
 
-<body>
-    <header>
-        <div class="links">
-            <a href="/">Sobre</a>
-            <a href="/">Aulas</a>
-        </div>
-    </header>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{% endblock %}
+
+
+{% block content %}
+
 
     <div id="wrapper">
         <h1>Aulas</h1>
@@ -111,6 +106,5 @@
     </div>
 
     <script src="/script.js"></script>
-</body>
 
-</html>
+    {% endblock %}
