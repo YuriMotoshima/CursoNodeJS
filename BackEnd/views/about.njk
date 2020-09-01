@@ -1,19 +1,22 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>{{about.name}}</title>
+{% endblock %}
 
 {% block content %}
 
     <div id="wrapper">
-        <img src="https://lh3.googleusercontent.com/RfEth5-pzaXP4PmyCH7Vmi7bfWvEl105KTxIZfVKMJtDh8x9qcvOIOfFC-VgHRzJ8r_0BGg6Aw-fbXkQxK2ALPXLb6p-jJ2mr7LCScT99_syAM4GCCscSRFLv8xc0Pj8sPQPZlNJgpzDxZeZMv5GDQM8_V66M6c7gWgsa59OryPd9dnwIE0zBwLoLkaosQshs3ThjFLHg3fkgi9Fk5kw_uIPg0h24m-S5EKPIL0B8oWcudpcYROcG1jdL8AoDbA6YiURze5vpFYrBDymFV6n9N5R2ZT43G9QrxLfFjfbreNnhUhddZh3OR1909yhKXi8jL02NsKqRz7VDxsJQZcTRHyypvtf-U-1BopgwIUzb9zKzPtT12J5DFsbmLn2EBpuARZV7xvkcAzs-RGeuFSBgsdfUSuN5SDm4K4p_gLOQtt1SmNFC1DsSvxY3UcHCXHG7jPm1cDYbPH2g7EOktNB4Xgi55yBxAc3VbV0VEDfOyJnEZ7MgyyOGN_c9IlsN0HCG5RtmD4SwpuGWOt3NrBxrYEaA04qDX5VOQtCOUKCrU6M1jsfybX_DHcwyzPEWZK5c4uUI7mgyDLBTIkooX_6wIC_pMRHWREEYdQXCep6s58Q_lG1ZOW1yxrA42_eSSm0u4fr0YFFZf5HBJIyYvb01qy-wKniFWR-nBrnZ1J_ttbtqoZPWFeKeAyLgilU1qo=w696-h927-no"
-            alt="Yuri Motoshima">
-        <h1>Yuri Motoshima</h1>
-        <h2>Aluno - Rocketseat</h2>
-        <p>Analista Sênior em Negócios Imobiliário e Análista de Dados para BI na <a href="https://www.accenture.com.br" target="_blank">Accenture</a></p>
+        <img src="{{about.avatar_url}}" alt="Imagem de {{about.name}}">
+        <h1>{{about.name}}</h1>
+        <h2>{{about.role}}</h2>
+        <p>{{about.description}}</p>
     </div>
 
     <div id="links-footer" class="links">
-        <a href="https://github.com/YuriMotoshima/CursoNodeJS" target="_blank">Github</a>
-        <a href="https://www.twitter.com" target="_blank">Twitter</a>
-        <a href="https://www.Linkedin.com.br" target="_blank">Linkedin</a>
+        {% for link in about.links %}
+            <a href="{{link.url}}" target="_blank">{{link.name}}</a>
+        {% endfor %}
     </div>
 
-    {% endblock %}
+{% endblock %}
