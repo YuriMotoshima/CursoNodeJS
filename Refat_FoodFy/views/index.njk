@@ -16,37 +16,16 @@
 
         <div class="content">
 
-            <div class="card">
-                <img src="/burger.png" alt="">
-                <h4>Triplo bacon burger</h4>
-                <p>por Jorge Relato</p>
-            </div>
-            <div class="card">
-                <img src="/pizza.png" alt="">
-                <h4>Pizza 4 estações</h4>
-                <p>por Fabiana Melo</p>
-            </div>
-            <div class="card">
-                <img src="/espaguete.png" alt="">
-                <h4>Espaguete ao alo</h4>
-                <p>por Júlia Kinoto</p>
-            </div>
-            <div class="card">
-                <img src="/lasanha.png" alt="">
-                <h4>Lasanha mac 'n cheese</h4>
-                <p>por Juliano Vieira</p>
-            </div>
-            <div class="card">
-                <img src="/doce.png" alt="">
-                <h4>Docinhos pão-do-céu</h4>
-                <p>por Ricardo Golvea</p>
-            </div>
-            <div class="card">
-                <img src="/asinhas.png" alt="">
-                <h4>Assinhas de frango ao barbecue</h4>
-                <p>por Vania Steroski</p>
-            </div>
+            {% for item in items %}
 
+                <div class="card">
+                    <img src="{{item.image}}" alt="Imagem de {{item.food}}">
+                    <h4>{{item.food}}</h4>
+                    <p>por
+                        {{item.chef}}</p>
+                </div>
+
+            {% endfor %}
         </div>
 
     </main>
