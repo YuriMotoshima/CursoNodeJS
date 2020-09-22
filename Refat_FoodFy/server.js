@@ -31,9 +31,15 @@ server.get('/about', function (req, res) {
     return res.render("about")
 })
 
-server.get("/recipes/:index", function (req, res) {
-    const recipes = [ingredients]; // Array de receitas carregadas do data.js
-    const recipeIndex = req.params.index;
+server.get("/receita/:index", function (req, res) {
+    const recipes = receitas
+    const recipeIndex = req.params.index
 
-    return res.send(console.log(recipes[recipeIndex]))
+    if (!recipes[recipeIndex]) {
+        res.send(`Receita nº ${recipeIndex}, not found!`)
+    }
+
+    console.log(recipes[recipeIndex])
+    return res.render("receita", { item: recipes[recipeIndex] })
+
 })
