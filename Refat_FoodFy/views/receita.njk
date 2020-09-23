@@ -3,9 +3,9 @@
 {% block content %}
     <main>
 
-        <div class="content">
+        <div class="content_receita">
 
-            <div class="card">
+            <div class="card_receita">
                 <img src="{{item.image}}" alt="Imagem de {{item.title}}">
                 <h4>{{item.title}}</h4>
                 <p>por
@@ -15,9 +15,14 @@
         </div>
 
         <div class="ingredientes">
-            <h4>Ingredientes</h4><br>
+            <h4>Ingredientes</h4>
+            <a href="">mostrar</a>
+        </div>
+
+        <div class="ingredientes_receita">
             <ul>
                 {% for ing in item.ingredients %}
+
                     <li>{{ing}}</li>
                 {% endfor %}
             </ul><br>
@@ -39,6 +44,7 @@
 {% endblock content %}
 
 <script src="/scripts.js"></script>
+
 </body>
 
 </html>
