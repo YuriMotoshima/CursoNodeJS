@@ -39,7 +39,7 @@ server.get("/receita/:index", function (req, res) {
         res.send(`Receita nº ${recipeIndex}, not found!`)
     }
 
-    console.log(recipes[recipeIndex])
+    /* console.log(recipes[recipeIndex]) */
     return res.render("receita", { item: recipes[recipeIndex] })
 
 })

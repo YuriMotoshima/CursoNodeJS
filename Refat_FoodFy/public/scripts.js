@@ -2,9 +2,9 @@ const modalOverlay = document.querySelector('.modal-overlay')
 const cards = document.querySelectorAll('.card')
 
 for (let card of cards) {
-    card.addEventListener('click', function(){
+    card.addEventListener('click', function () {
         const imageCard = card.querySelector('.card img')
-        const titulo =  card.querySelector('.card h4')
+        const titulo = card.querySelector('.card h4')
         const autor = card.querySelector('.card p')
 
         modalOverlay.classList.add('active')
@@ -20,4 +20,7 @@ document.querySelector('.modal-content, .close-modal').addEventListener("click",
     modalOverlay.querySelector("img").src = "" // limpa o SRC da TAG iframe que está dentro da TAG da constante modalOverlay
 })
 
+
+/* display :none
+display: block; */
 

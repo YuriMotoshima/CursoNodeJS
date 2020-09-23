@@ -230,3 +230,53 @@ main .content_receita{
     margin-left: 20px;
     margin-top: 20px;
 }
+
+.modo_preparo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 390px;
+    align-items: baseline;
+}
+
+.modo_preparo a{
+    font-size: 12px;
+    color: #999999;
+    text-decoration: none;
+    top: 10px;
+}
+.modo_preparo h4{
+    font-size: 24px;
+    color:#111111;
+}
+
+.preparo {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    margin-top: 20px;
+}
+
+.info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 390px;
+    align-items: baseline;
+}
+
+.info a{
+    font-size: 12px;
+    color: #999999;
+    text-decoration: none;
+    top: 10px;
+}
+.info h4{
+    font-size: 24px;
+    color:#111111;
+}
+
+.information {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    margin-top: 20px;
+}
