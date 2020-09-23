@@ -24,3 +24,12 @@ document.querySelector('.modal-content, .close-modal').addEventListener("click",
 /* display :none
 display: block; */
 
+const receitas = document.querySelectorAll('.receita-info')
+
+for (let receita of receitas) {
+    receita.addEventListener("click", function () {
+        const bottom = receita.getElementsByClassName('bottomReceita')
+        const txt = bottom.textContent
+        console.log(txt)
+    })
+}

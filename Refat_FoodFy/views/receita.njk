@@ -5,7 +5,7 @@
 
         <div class="content_receita">
 
-            <div class="card_receita">
+            <div class="receita-head">
                 <img src="{{item.image}}" alt="Imagem de {{item.title}}">
                 <h4>{{item.title}}</h4>
                 <p>por
@@ -13,38 +13,51 @@
             </div>
 
         </div>
+        <section class="receitas">
+            <div class="receita-info">
 
-        <div class="ingredientes">
-            <h4>Ingredientes</h4>
-            <a href="">mostrar</a>
-        </div>
+                <div class="info">
+                    <h4>Ingredientes</h4>
+                    <a class="bottomReceita" href="">mostrar</a>
+                </div>
 
-        <div class="ingredientes_receita">
-            <ul>
-                {% for ing in item.ingredients %}
+                <div class="information">
+                    <ul>
+                        {% for ing in item.ingredients %}
+                            <li>{{ing}}</li>
+                        {% endfor %}
+                    </ul><br>
+                </div>
 
-                    <li>{{ing}}</li>
-                {% endfor %}
-            </ul><br>
-        </div>
+            </div>
 
-        <div class="modo_preparo">
-            <h4>Modo de preparo</h4>
-            <a href="">mostrar</a>
-        </div>
+            <div class="receita-info">
 
-        <div class="preparo">
-            <p>{{item.preparation}}</p><br>
-        </div>
+                <div class="info">
+                    <h4>Modo de preparo</h4>
+                    <a class="bottomReceita" href="">mostrar</a>
+                </div>
 
-        <div class="info">
-            <h4>Mais Informação</h4>
-            <a href="">mostrar</a>
-        </div>
+                <div class="information">
+                    <p>{{item.preparation}}</p><br>
+                </div>
 
-        <div class="information">
-            <p>{{item.information}}</p><br>
-        </div>
+            </div>
+
+            <div class="receita-info">
+
+                <div class="info">
+                    <h4>Mais Informação</h4>
+                    <a class="bottomReceita" href="">mostrar</a>
+                </div>
+
+                <div class="information">
+                    <p>{{item.information}}</p><br>
+                </div>
+
+            </div>
+
+        </section>
 
     </main>
 {% endblock content %}

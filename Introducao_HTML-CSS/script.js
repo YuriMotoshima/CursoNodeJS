@@ -5,7 +5,7 @@ for (let card of cards) { // função de repetição for "para" (let => variavel
     card.addEventListener("click", function () { // cada card que sofrer um click, executar a função
         const videoId = card.getAttribute("id"); // procurar o atributo ID na TAG do HTML e atribuir esse ID na varivel constante de nome videoId
         modalOverlay.classList.add('active') // adicionar no nome da classe da TAG atribuida na variavel constante de nome modalOverlay o nome active
-        modalOverlay.querySelector('iframe').src =  `https://www.youtube.com/embed/${videoId}` //seleciona a TAG iframe que há dentro da TAG selecionada na const modalOverlay e adiciona no SRC o link que deve ser aberto de acordo a variavel constante de nome videoId
+        modalOverlay.querySelector('iframe').src = `https://www.youtube.com/embed/${videoId}` //seleciona a TAG iframe que há dentro da TAG selecionada na const modalOverlay e adiciona no SRC o link que deve ser aberto de acordo a variavel constante de nome videoId
 
     })
 }
@@ -24,3 +24,12 @@ document.querySelector('.close-modal').addEventListener("click", function () { /
 - .getAttribute() seleciona qualquer atributo existente em uma TAG do HTML;
 
 */
+
+const receitas = document.querySelectorAll('.receita-info')
+
+for (let receita of receitas) {
+    receita.addEventListener("click", function () {
+        const bottom = receita.getElementsByTagName('a')
+        console.log(bottom)
+    })
+}
