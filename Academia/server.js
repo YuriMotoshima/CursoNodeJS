@@ -6,6 +6,12 @@ npm install nunjucks (É uma template engine - um motor que trabalha com templat
 npm install browser-sync -D(Responsável por reload na pagina quando mudar arquivos, no projeto.)
 npm npm-run-all -D(ele faz rodar diversos serviços.) */
 
+/* === NO PACKAGE.JSON ====
+"start": "npm-run-all -p nodemon browsersync", aqui é onde configuramos para rodar o servidor e o browser sync que verifica atualizações nas pastas do projeto 
+"nodemon": "nodemon server.js", aqui roda o servidor com as rotas 
+"browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public,views'" aqui é onde é configura que antes de reinicia o server primeiro tem que passar nas pastas public e views, para atualizar o conteudo
+ */
+
 const express = require('express')
 const nunjucks = require('nunjucks')
 const routes = require('./routes')
