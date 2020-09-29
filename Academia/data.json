@@ -1,0 +1,22 @@
+{
+    "instructors": [
+        {
+            "avatar_url": "https://google.com",
+            "name": "YURI ROBERTO MOTOSHIMA",
+            "birth": 954547200000,
+            "gender": "M",
+            "services": "Musculação,Crossfit",
+            "created_at": 1601224233179,
+            "id": 1
+        },
+        {
+            "id": 2,
+            "avatar_url": "https://google.com",
+            "name": "YURI ROBERTO MOTOSHIMA",
+            "birth": 967161600000,
+            "gender": "M",
+            "services": "Musculação,Crossfit",
+            "created_at": 1601372127887
+        }
+    ]
+}
