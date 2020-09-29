@@ -17,11 +17,21 @@ routes.get('/instructors/create', function (req, res) {
     return res.render('instructors/create')
 })
 
+routes.get('/instructors/:id', instructors.show)
+
 routes.post('/instructors', instructors.postCreateNewInstructors)
 
-/* 
+
+routes.get('/members', function (req, res) {
+    return res.send('/members')
+})
+
+module.exports = routes
+
+
+/*
 -==== EXEMPLO ====-
-Aqui temos uma forma de criar rotas e usar functions para validar, receber e enviar 
+Aqui temos uma forma de criar rotas e usar functions para validar, receber e enviar
 e/ou alterar DOMs do HTML.
 
 routes.post('/instructors', function (req, res) {
@@ -36,8 +46,3 @@ routes.post('/instructors', function (req, res) {
     return res.send(req.body)
 })
  */
-
-routes.get('/members', function (req, res) {
-    return res.send('/members')
-})
-module.exports = routes

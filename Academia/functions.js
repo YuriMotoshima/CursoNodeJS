@@ -48,7 +48,7 @@ exports.postCreateNewInstructors = function (req, res) {
 
     let { avatar_url, birth, gender, services, name } = req.body
 
-    birth = Date.parse(birth) // aqui é alterado a formação de data recebido pelo body campo de name Birth
+    birth = Date.parse(birth) // aqui é alterado a formação de data em milisegudos recebido pelo body o campo de name Birth
     const created_at = Date.now() // aqui é acrescentado um novo campo no data.json de nome created_at e de valor a data atual no momento do submit
     const id = Number(data.instructors.length + 1) // aqui é verificado quantos items tem no .data e criado um id.
 
@@ -71,4 +71,16 @@ exports.postCreateNewInstructors = function (req, res) {
     })
 
     //return res.send(req.body)
+}
+
+exports.show = function (req, res) {
+    const { id } = req.params
+
+    const foundInstructor = data.instructors.find(function (instructor) {
+        return instructor.id == id
+    })
+    if (!foundInstructor) {
+        return res.send('Instructor not found!')
+    }
+    return res.send(foundInstructor)
 }
