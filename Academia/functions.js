@@ -1,6 +1,8 @@
 // GET
 const fs = require("fs")
 const data = require("./data.json")
+const { age } = require("./utils")
+
 //POST - CREATE NEW INSTRUCTOR -- VALID
 
 //exports.postCreateNewInstructors = function (req, res) {
@@ -67,7 +69,7 @@ exports.postCreateNewInstructors = function (req, res) {
     fs.writeFile('data.json', JSON.stringify(data, null, 4), function (err) {
         if (err) return res.send("Write file error!")
 
-        return res.redirect('instructors')
+        return res.redirect('/instructors')
     })
 
     //return res.send(req.body)
@@ -82,5 +84,15 @@ exports.show = function (req, res) {
     if (!foundInstructor) {
         return res.send('Instructor not found!')
     }
-    return res.send(foundInstructor)
+
+
+    const newInstructor = {
+        ...foundInstructor,
+        age: age(foundInstructor.birth),
+        services: foundInstructor.services.split(","),
+        created_at: new Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_at)
+    }
+
+    // console.log(newInstructor)
+    return res.render("instructors/show", { instructor : newInstructor })
 }

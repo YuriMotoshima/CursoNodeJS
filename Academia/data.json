@@ -17,6 +17,15 @@
             "gender": "M",
             "services": "Musculação,Crossfit",
             "created_at": 1601372127887
+        },
+        {
+            "id": 3,
+            "avatar_url": "https://app.rocketseat.com.br/",
+            "name": "Yuri Roberto Motoshima",
+            "birth": 640396800000,
+            "gender": "M",
+            "services": "Development",
+            "created_at": 1635846133154
         }
     ]
 }
